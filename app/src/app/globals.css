@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-paper-base: #fdfcf7;
+  --color-paper-surface: #f5f3eb;
+  --color-paper-strong: #ece9dd;
+  --color-ink: #2d2a26;
+  --color-ink-2: #57534d;
+  --color-ink-muted: #8a857d;
+  --color-primary: #181612;
+  --color-ok-bg: #edf5f0;
+  --color-ok: #2d633e;
+  --color-loan-bg: #efece6;
+  --color-loan: #5c5851;
+  --color-late-bg: #fcefeb;
+  --color-late: #b33324;
+  --font-serif: "Noto Serif KR", serif;
+  --font-sans: "Work Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: var(--color-paper-base);
+  color: var(--color-ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+.font-heading {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+.ms {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  vertical-align: middle;
+}
+
+input,
+select,
+textarea {
+  font-size: 17px;
 }

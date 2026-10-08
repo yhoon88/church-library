@@ -14,7 +14,17 @@
   - [x] 가정 목록 확인 (A4 → 관리자 비밀번호로 변경)
   - [x] PRD.md 작성 완료 → OK 받음
 - **2단계 · 디자인 (스티치): 진행 중** — 사용자가 스티치 결과(이미지·코드) 가져오기를 기다리는 중. "스티치 건너뛰기"면 PRD+레퍼런스로 기본 디자인 정하고 3단계로
-- 3단계 · 구현·배포: 대기
+- 2단계 완료 (스티치 화면 18개 확인, OK 받음)
+- **3단계 · 구현·배포: 진행 중**
+  - [x] Node.js·GitHub CLI·Vercel CLI 설치, gh 로그인(yhoon88), vercel 로그인(yhoon88-4011, 팀 sw-team3)
+  - [x] Supabase: 사용자 요청으로 커넥터 대신 브라우저 사용. yhoon88-make's Org에 church-library (kfvbfontkifaoyntmamv, 시드니) 생성 + SQL 에디터로 테이블 books/members/loans/login_attempts, RLS on, Storage loan-photos(public)
+    - (참고) 처음 커넥터로 SDBin's Org에 만든 church-library(mzeebirmifphtazjgort)는 안 씀 — 정리 여부 사용자에게 확인 필요
+  - Vercel도 커넥터 쓰지 않음 (CLI만). GitHub 자동 배포 연동 안 함 → `vercel --prod`로 배포
+  - [x] GitHub 저장소 yhoon88/church-library (public, 커밋 작성자 noreply), Next.js는 app/ 폴더
+  - [x] Vercel 프로젝트 church-library (rootDirectory=app, 함수 지역 icn1)
+  - [ ] 사용자 할 일: Vercel에 GitHub 연결, Supabase secret key 저장, 관리자 비밀번호 저장, Vercel Authentication 끄기
+  - [ ] API 라우트 작성 / 화면 작성(서브에이전트) → 로컬 확인 → 배포
+  - 비밀 값 저장: `powershell -ExecutionPolicy Bypass -File D:\myService\scripts\save-secret.ps1 <이름> <최소길이>` (클립보드 → app\.env.local)
 
 ## 정해진 것
 (아직 없음)
