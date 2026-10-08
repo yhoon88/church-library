@@ -22,8 +22,12 @@
   - Vercel도 커넥터 쓰지 않음 (CLI만). GitHub 자동 배포 연동 안 함 → `vercel --prod`로 배포
   - [x] GitHub 저장소 yhoon88/church-library (public, 커밋 작성자 noreply), Next.js는 app/ 폴더
   - [x] Vercel 프로젝트 church-library (rootDirectory=app, 함수 지역 icn1)
-  - [ ] 사용자 할 일: Vercel에 GitHub 연결, Supabase secret key 저장, 관리자 비밀번호 저장, Vercel Authentication 끄기
-  - [ ] API 라우트 작성 / 화면 작성(서브에이전트) → 로컬 확인 → 배포
+  - [x] 사용자: Supabase secret key·관리자 비밀번호 저장, Vercel Authentication 끔 (GitHub 연동은 사용자 요청으로 안 함)
+  - [x] API + 화면 작성 → 로컬 API 테스트 통과 → Vercel 환경변수(Sensitive) 등록 → 배포
+  - [x] **배포 URL: https://church-library-nine.vercel.app** (로그인 없이 열림, 관리자 비밀번호 서버 확인 OK)
+  - [ ] 사용자 최종 확인: /admin에서 맞는 비밀번호로 들어가지는지, 폰에서 사진·바코드 동작
+  - 재배포: D:\myService 에서 `vercel --prod --yes --scope sw-team3`
+  - 환경변수 다시 넣을 때는 bash에서 printf로 (PowerShell 파이프는 줄바꿈이 섞여 비밀번호가 틀어짐)
   - 비밀 값 저장: `powershell -ExecutionPolicy Bypass -File D:\myService\scripts\save-secret.ps1 <이름> <최소길이>` (클립보드 → app\.env.local)
 
 ## 정해진 것
